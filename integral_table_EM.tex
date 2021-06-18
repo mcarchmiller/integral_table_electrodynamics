@@ -1,0 +1,309 @@
+\documentclass[fleqn,leqno]{article}
+
+% List of packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+% User defined macros and definitions
+% Differential, `d'
+\providecommand*{\diff}{\ensuremath{\mathrm{d}}}
+% Euler's number, `e'
+\providecommand*{\En}{\ensuremath{\mathrm{e}}}
+
+% Document specific declarations
+%\title{Some useful integrals for E\&M (cite by writing ``(ieq\#)'')}
+\title{Some useful integrals for electrodynamics homework (cite by writing ``(ieq\#)'')}
+\author{Matthew C. ArchMiller}
+%\date{}
+
+% Make footnotes use symbols instead of numbers
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% Add space between lines of text
+%\renewcommand\baselinestretch{1.5}
+
+% Set the margins
+\setlength{\textwidth}{7.0 in}
+\setlength{\oddsidemargin}{0.0 in}
+\setlength{\evensidemargin}{0.0 in}
+\setlength{\hoffset}{-0.25 in}
+
+% Text body vertically starts at (1 in + \voffset) + \topmargin + \headheight + \headsep
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\voffset}{-0.25in}
+
+\setlength{\parskip}{2.5ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0.0pt}
+
+%\setlength{\mathindent}{0.0pt}
+\everymath = {\displaystyle}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%Some useful integrals for E\&M homework (cite by writing ``(ieq\#)'')\\
+Some useful integrals for electrodynamics homework (cite by writing ``(ieq\#)'')\\
+All constants of integration are omitted but implied.
+
+
+$\int x^n\, \diff x = \frac{x^{n+1}}{n+1}\,, \mspace{20mu} n\ne-1$
+\hfill{}
+$\int \frac{\diff x}{x} = \ln |x|$
+\hfill{}
+$\int \sin ax\, \diff x = - \frac{\cos ax}{a}$
+\hfill{}
+$\int \cos ax\, \diff x = \frac{\sin ax}{a}$
+
+$\int \En^{ax}\, \diff x = \frac{\En^{ax}}{a}$
+\hfill{}
+%
+%
+\begin{equation}
+	\int \frac{\diff x}{ax + b} = \frac{1}{a}\ln |ax+b\mspace{1mu}|
+\end{equation}
+%
+%
+\begin{equation}
+	\int \frac{\diff x}{(ax + b)^2} = \frac{-1}{a(ax+b)}
+\end{equation}
+%
+% Schaumn's 17.2.16 (Corrected!)
+\begin{equation}
+	\int (ax + b)^{m/2} = \frac{2(ax+b)^{(m+2)/2}}{a(m+2)}
+\end{equation}
+%
+% Schaumn's 
+\begin{equation}
+	\int x(ax + b)^{m/2} = \frac{2(ax+b)^{(m+4)/2}}{a^2(m+4)} - 
+		\frac{2b(ax+b)^{(m+2)/2}}{a^2(m+2)}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \frac{\diff x}{\sqrt{x^2 + a^2}} = \ln \left|x + \sqrt{x^2 + a^2} \right|
+\end{equation}
+%
+%
+\begin{equation}
+	\int \frac{x \,\diff x}{\sqrt{x^2 + a^2}} = \sqrt{x^2 + a^2}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sqrt{x^2 + a^2}\, \diff x = \frac{x \sqrt{x^2 + a^2}}{2} + 
+		\frac{a^2}{2} \ln\left( x + \sqrt{x^2 + a^2} \mspace{2mu}\right)
+\end{equation}
+%
+%
+\begin{equation}
+	\int \frac{\diff x}{(x^2 + a^2)^{3/2}} = \frac{x}{a^2\sqrt{x^2 + a^2}}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \frac{x \,\diff x}{(x^2 + a^2)^{3/2}} = \frac{-1}{\sqrt{x^2 + a^2}}
+\end{equation}
+%
+%
+%: Integrals involving trigonometric functions
+%
+%
+\begin{equation}
+	\int x\sin ax\, \diff x = \frac{\sin ax}{a^2} - \frac{x\cos ax}{a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int x^2\sin ax\, \diff x = \frac{2x}{a^2} \sin ax + 
+	\left( \frac{2}{a^3} - \frac{x^2}{a} \right)\cos ax
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sin^2 ax\, \diff x = \frac{x}{2} - \frac{\sin 2ax}{4a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sin^3 ax\, \diff x = -\frac{\cos ax}{a} + \frac{\cos^3 ax}{3a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int x\cos ax\, \diff x = \frac{\cos ax}{a^2} + \frac{x\sin ax}{a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int x^2\cos ax\, \diff x = \frac{2x}{a^2} \cos ax + 
+	\left( \frac{x^2}{a} - \frac{2}{a^3} \right)\sin ax
+\end{equation}
+%
+%
+\begin{equation}
+	\int \cos^2 ax\, \diff x = \frac{x}{2} + \frac{\sin 2ax}{4a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \cos^3 ax\, \diff x = \frac{\sin ax}{a} - \frac{\sin^3 ax}{3a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sin ax\, \cos ax \, \diff x = \frac{\sin^2 ax}{2a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sin^2 ax\, \cos^2 ax \, \diff x = \frac{x}{8} - \frac{\sin 4ax}{32a}
+\end{equation}
+%
+%
+\begin{equation}
+	\int \sin^n ax\, \cos ax\, \diff x = \frac{\sin^{n+1} ax}{(n+1)a}\,, \mspace{20mu} n\ne-1
+\end{equation}
+%
+%
+\begin{equation}
+	\int \cos^n ax\, \sin ax\, \diff x = -\frac{\cos^{n+1} ax}{(n+1)a}\,, \mspace{20mu} n\ne-1
+\end{equation}
+%
+%
+\begin{equation}
+	\int\frac{\sin{ax}\, \diff x}{(p + q \cos{ax})^n} = \frac{1}{aq(n-1)(p + q \cos{ax})^{n-1}}
+\end{equation}
+%
+%
+%: Integrals involving logs
+%
+%
+\begin{equation}
+	\int x^n \ln x\, \diff x = \frac{x^{n+1}}{n+1} \left( \ln x - \frac{1}{n+1} \right)\,,
+	\mspace{20mu} \text{if $n=-1$, see (ieq\ref{eq:int lnx / x})}
+\end{equation}
+%
+%
+\begin{equation}\label{eq:int lnx / x}
+	\int \frac{\ln x}{x}\, \diff x = \frac{1}{2} \left( \ln x \right)^2
+\end{equation}
+
+
+%
+%: Definite Integrals
+%
+\vspace{1em}
+Definite Integrals
+\begin{equation}
+	\int_0^{\pi/2} \sin^2 x\, \diff x = \int_0^{\pi/2} \cos^2 x\, \diff x = \frac{\pi}{4}
+\end{equation}
+%
+%
+\begin{equation}
+	\int_0^\infty \En^{-ax^2}\, \diff x = \frac{1}{2}\sqrt{\frac{\pi}{a}}
+\end{equation}
+%
+% Schaumn's 18.76
+\begin{equation}
+	\int_0^\infty x^n \En^{-ax}\, \diff x = \frac{n!}{a^{n+1}}\,, \mspace{20mu}
+		n = 0, 1,2,\ldots
+\end{equation}
+
+
+%
+%: Fourier's trick integrals
+%
+%\vspace{1em}
+Fourier's trick integrals
+\begin{align}
+	&\int_0^a \sin(m\pi x / a)\, \sin(n\pi x / a)\, \diff x = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } m \ne n,\\[4pt]
+		a/2 & \text{if } m = n
+	\end{array} \right.\\[10pt]
+	%
+	&\int_0^a \cos(m\pi x / a)\, \cos(n\pi x / a)\, \diff x = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } m \ne n,\\[4pt]
+		a/2 & \text{if } m = n
+	\end{array} \right.\\[10pt]
+	%
+	&\int_{-1}^{1} P_\ell(x)\, P_m(x)\, \diff x = 
+	\int_0^\pi P_\ell(\cos\theta)\, P_m(\cos\theta) \sin\theta\, \diff \theta = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } \ell \ne m,\\[6pt]
+		\frac{2}{2 \ell + 1} & \text{if } \ell = m
+	\end{array} \right. &
+\end{align}
+
+Legendre Polynomials
+\begin{flalign*}
+	P_0(x) &= 1\\
+	P_1(x) &= x\\
+	P_2(x) &= \left(3x^2 - 1\right) \!/ \mspace{2mu}2\\
+	P_3(x) &= \left(5x^3 - 3x\right) \!/ \mspace{2mu}2\\
+	P_4(x) &= \left(35x^4 - 30x^2 + 3\right) \!/ \mspace{2mu}8\\
+	P_5(x) &= \left(63x^5 - 70x^3 + 15x\right) \!/ \mspace{2mu}8 &
+\end{flalign*}
+
+\end{document}
+
+
+
+
+
+
+\newpage
+Legendre Polynomials
+\begin{flalign*}
+	P_0(x) &= 1\\
+	P_1(x) &= x\\
+	P_2(x) &= (3x^2-1)/2\\
+	P_3(x) &= (5x^3-3x)/2\\
+	P_4(x) &= (35x^4 - 30x^2 + 3)/8\\
+	P_5(x) &= (63x^5 - 70x^3 + 15x)/8 &
+\end{flalign*}
+
+Fourier's trick integrals
+\begin{flalign*}
+	&\int_0^a \sin(m\pi x / a)\, \sin(n\pi x / a)\, \diff x = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } m \ne n,\\[4pt]
+		a/2 & \text{if } m = n
+	\end{array} \right.\\[10pt]
+	%
+	&\int_0^a \cos(m\pi x / a)\, \cos(n\pi x / a)\, \diff x = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } m \ne n,\\[4pt]
+		a/2 & \text{if } m = n
+	\end{array} \right.\\[10pt]
+	%
+	&\int_{-1}^{1} P_l(x)\, P_m(x)\, \diff x = 
+	\int_0^\pi P_l(\cos\theta)\, P_m(\cos\theta) \sin\theta\, \diff \theta = 
+	\left\{
+	\begin{array}{cl}
+		0 & \text{if } l \ne m,\\[6pt]
+		\frac{2}{2 l + 1} & \text{if } l = m
+	\end{array} \right. &
+\end{flalign*}
+
+
+\newpage
+$\int \frac{x \,\diff x}{x^2 + a^2} = \frac{1}{2} \ln(x^2 + a^2)$
+
+\end{document}
+
+
+
+
+
